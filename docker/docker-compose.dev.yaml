@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  mysql_db:
+    container_name: employee_db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3306:3306"
